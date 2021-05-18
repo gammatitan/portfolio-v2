@@ -7,7 +7,7 @@ const ProjectsList = () => {
     <StyledProjectsList>
       {PROJECTS_LIST.map((project) => (
         <ProjectListItem
-          key={project.name}
+          key={`${project.name} ${project.client}`}
           date={project.shortDate}
           url={project.slug}
           name={project.name}

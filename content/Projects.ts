@@ -18,18 +18,18 @@ type Projects = {
 };
 
 const PROJECTS: Projects = {
-  PORTFOLIO_WEBSITE: {
-    client: 'Personal Project',
-    name: 'My Portfolio Website V2',
-    date: 'May 2021',
-    shortDate: 'May 2021',
-    slug: '/projects/portfolio-v2',
-    url: 'https://jake-brown.co.uk',
-    overview: 'Wanted to play around with styled-components. I like it!',
-    keyPoints: ['Build over a weekend'],
-    keyLearnings: [`First project with styled-components`],
-    technologies: [Technologies.TypeScript, Technologies.NextJS],
-  },
+  // PORTFOLIO_WEBSITE: {
+  //   client: 'Personal Project',
+  //   name: 'My Portfolio Website V2',
+  //   date: 'May 2021',
+  //   shortDate: 'May 2021',
+  //   slug: '/projects/portfolio-v2',
+  //   url: 'https://jake-brown.co.uk',
+  //   overview: 'Wanted to play around with styled-components. I like it!',
+  //   keyPoints: ['Build over a weekend'],
+  //   keyLearnings: [`First project with styled-components`],
+  //   technologies: [Technologies.TypeScript, Technologies.NextJS],
+  // },
   SHABA_WEBSITE: {
     client: 'SH&BA',
     name: 'New Website',

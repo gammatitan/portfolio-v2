@@ -1,6 +1,7 @@
 import Hero from './Sections/Hero';
 import Projects from './Sections/Projects';
 import Contact from './Sections/Contact';
+import Experience from './Sections/Experience';
 
 const Home = () => {
   const onHeroButtonClick = () => {
@@ -10,6 +11,7 @@ const Home = () => {
   return (
     <>
       <Hero handleButtonClick={onHeroButtonClick} />
+      <Experience />
       <Projects />
       <Contact />
     </>

@@ -17,6 +17,7 @@ const TypographyLookup = {
 const Typography = ({ children, variant = 'default', ...rest }: Props) => {
   const TypographyComponent = TypographyLookup[variant];
 
+  // @ts-ignore
   return <TypographyComponent {...rest}>{children}</TypographyComponent>;
 };
 
