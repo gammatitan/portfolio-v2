@@ -79,7 +79,7 @@ const PROJECTS: Projects = {
     date: 'December 2019',
     shortDate: 'Dec 2019',
     slug: '/projects/clear-h2o-booking-form',
-    url: 'book-clear-h2o.web.app',
+    url: 'https://book-clear-h2o.web.app',
     overview:
       'Clear H2O Window Cleaning Ltd approached me with an idea: they wanted a simple, online booking form so customers could book their services without phone interaction.\n\nAs a result, I designed and a built an online booking system, with automated emails, as well as an admin dashboard for Clear H2O to manage their bookings.',
     keyPoints: [
