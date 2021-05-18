@@ -9,5 +9,5 @@ export const StyledTechnologyList = styled.ul`
 `;
 
 export const TechnologyListItem = styled.li`
-  margin-right: ${rem('16px')};
+  margin-right: ${rem('48px')};
 `;

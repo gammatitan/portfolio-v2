@@ -1,13 +1,11 @@
 import PageWrapper from '../../components/PageWrapper';
-import TechnologyList from '../../components/TechnologyList';
+import Project from '../../containers/Project';
 import { PROJECTS_LIST } from '../../content/Projects';
 
 const ProjectPage = (props: any) => {
-  console.log(props);
-
   return (
     <PageWrapper>
-      <TechnologyList list={props.content.technologies} />
+      <Project {...props.content} />
     </PageWrapper>
   );
 };

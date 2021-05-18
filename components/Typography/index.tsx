@@ -3,22 +3,21 @@ import { Paragraph, BoldText, Title, SubHeading, Heading } from './styles';
 type Props = {
   children: React.ReactNode;
   variant?: 'default' | 'bold' | 'title' | 'subheading' | 'heading';
+  as?: string;
 };
 
-const Typography = ({ children, variant, ...rest }: Props) => {
-  switch (variant) {
-    case 'heading':
-      return <Heading {...rest}>{children}</Heading>;
-    case 'subheading':
-      return <SubHeading {...rest}>{children}</SubHeading>;
-    case 'title':
-      return <Title {...rest}>{children}</Title>;
-    case 'bold':
-      return <BoldText {...rest}>{children}</BoldText>;
-    case 'default':
-    default:
-      return <Paragraph {...rest}>{children}</Paragraph>;
-  }
+const TypographyLookup = {
+  heading: Heading,
+  subheading: SubHeading,
+  title: Title,
+  bold: BoldText,
+  default: Paragraph,
+};
+
+const Typography = ({ children, variant = 'default', ...rest }: Props) => {
+  const TypographyComponent = TypographyLookup[variant];
+
+  return <TypographyComponent {...rest}>{children}</TypographyComponent>;
 };
 
 export default Typography;

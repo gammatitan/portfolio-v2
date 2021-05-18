@@ -1,11 +1,12 @@
 import Technologies from '../constants/technologies';
 
-type Project = {
+export type Project = {
   client: string;
   name: string;
   date: string;
   shortDate: string;
   slug: string;
+  url: string;
   overview: string;
   keyPoints: string[];
   keyLearnings: string[];
@@ -23,8 +24,9 @@ const PROJECTS: Projects = {
     date: 'May 2021',
     shortDate: 'May 2021',
     slug: '/projects/portfolio-v2',
-    overview: '',
-    keyPoints: [''],
+    url: 'https://jake-brown.co.uk',
+    overview: 'Wanted to play around with styled-components. I like it!',
+    keyPoints: ['Build over a weekend'],
     keyLearnings: [`First project with styled-components`],
     technologies: [Technologies.TypeScript, Technologies.NextJS],
   },
@@ -34,6 +36,7 @@ const PROJECTS: Projects = {
     date: 'November 2020',
     shortDate: 'Nov 2020',
     slug: '/projects/shaba-website',
+    url: 'https://shaba.eu',
     overview:
       'SH&BA (Smart Home & Buildings Association) were looking to launch a new website for 2021.\n\nSo, I designed and built them one. Check it out via the link above.',
     keyPoints: [
@@ -50,11 +53,12 @@ const PROJECTS: Projects = {
     ],
   },
   KNOX_CAP_QUIZ: {
-    client: 'Knox Pharamceuticals',
+    client: 'Knox Pharmaceuticals',
     name: 'The CAP2020 Online Quiz',
     date: 'August 2020',
     shortDate: 'Aug 2020',
     slug: '/projects/knox-cap-2020-quiz',
+    url: 'https://pharmaknoxquiz.web.app',
     overview:
       'Knox Pharmaceuticals were looking to add some spice to their online virtual conference by offering a chance to win in-store vouchers via their online quiz. The buzz-feed styled quiz consitsted of 5 rounds, each lasting 30 seconds.\n\nI was responsible for designing and building the quiz. The game logic was abstracted from the UI, which allowed easy customisation of rules (such as points per answer and time constraints), modifying questions etc.\n\nOver 150 people had played the quiz by the end of the conference.',
     keyPoints: [
@@ -75,6 +79,7 @@ const PROJECTS: Projects = {
     date: 'December 2019',
     shortDate: 'Dec 2019',
     slug: '/projects/clear-h2o-booking-form',
+    url: 'book-clear-h2o.web.app',
     overview:
       'Clear H2O Window Cleaning Ltd approached me with an idea: they wanted a simple, online booking form so customers could book their services without phone interaction.\n\nAs a result, I designed and a built an online booking system, with automated emails, as well as an admin dashboard for Clear H2O to manage their bookings.',
     keyPoints: [
@@ -101,6 +106,7 @@ const PROJECTS: Projects = {
     date: 'November 2019',
     shortDate: 'Nov 2019',
     slug: '/projects/clear-h2o-wesbite',
+    url: 'https://clearh2owindowcleaning.co.uk',
     overview:
       'With little online presence, Clear H2O Window Cleaning Ltd were looking to get up-to-date with the times and launch a new website which would show of their online booking form.\n\nI designed and built them a website in Gatsby.js, which pulled content from a separate WordPress site - allowing the team at Clear H2O to easily update their website copy.',
     keyPoints: [
