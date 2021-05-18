@@ -10,7 +10,7 @@ const EXPERIENCES: Experience[] = [
   {
     jobTitle: 'Web Engineer',
     company: 'Depop',
-    companyUrl: 'https://depop.co.uk',
+    companyUrl: 'https://depop.com',
     employmentPeriod: 'March 2021 - Present',
     responsibilities: [
       'Working with TypeScript, React.js, Next.js, Redux, Node, Express',
