@@ -23,14 +23,12 @@ export const getStaticProps = async ({ params }: any) => {
 };
 
 export const getStaticPaths = async () => {
+  const paths = PROJECTS_LIST.map((project) => ({
+    params: { slug: project.slug.replace('/projects/', '') },
+  }));
+
   return {
-    paths: [
-      { params: { slug: 'portfolio-v2' } },
-      { params: { slug: 'shaba-website' } },
-      { params: { slug: 'knox-cap-2020-quiz' } },
-      { params: { slug: 'clear-h2o-booking-form' } },
-      { params: { slug: 'clear-h2o-wesbite' } },
-    ],
+    paths,
     fallback: false,
   };
 };

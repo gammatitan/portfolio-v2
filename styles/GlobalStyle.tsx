@@ -4,9 +4,9 @@ import fallbackFonts from './fallbackFonts';
 
 const GlobalStyle = createGlobalStyle`
     body {
-        background: ${(props) => props.theme.colors.darkBlue};
+        background: #161b25;
         font-size: ${rem('18px')};
-        color: ${(props) => props.theme.colors.white};
+        color: #FFFFFF;
         font-family: 'IBM Plex Sans', ${fallbackFonts};
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
@@ -30,7 +30,7 @@ const GlobalStyle = createGlobalStyle`
     a {
         margin: 0;
         transition: all 0.2s ease;
-        color: ${(props) => props.theme.colors.faintBlue};
+        color: #8ea8b7;
         text-decoration: none;
         cursor: pointer;
     }
