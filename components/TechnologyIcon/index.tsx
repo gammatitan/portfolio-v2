@@ -1,3 +1,4 @@
+import React from 'react';
 import Technologies from '../../constants/technologies';
 import IconAWS from '../Icon/IconAWS';
 import IconFirebase from '../Icon/IconFirebase';
@@ -12,42 +13,37 @@ import IconSass from '../Icon/IconSass';
 import IconStripe from '../Icon/IconStripe';
 import IconTypeScript from '../Icon/IconTypeScript';
 import IconWordPress from '../Icon/IconWordPress';
+import { IconWrapper } from './styles';
 
 type Props = {
   type: Technologies;
 };
 
+const IconLookup: { [x: string]: React.ReactNode } = {
+  [Technologies.Firebase]: IconFirebase,
+  [Technologies.Gatsy]: IconGatsby,
+  [Technologies.GraphQL]: IconGraphQL,
+  [Technologies.AWS]: IconAWS,
+  [Technologies.JavaScript]: IconJavaScript,
+  [Technologies.NextJS]: IconNextJS,
+  [Technologies.Node]: IconNode,
+  [Technologies.PHP]: IconPHP,
+  [Technologies.React]: IconReact,
+  [Technologies.Sass]: IconSass,
+  [Technologies.Stripe]: IconStripe,
+  [Technologies.TypeScript]: IconTypeScript,
+  [Technologies.WordPress]: IconWordPress,
+};
+
 const TechnologyIcon = ({ type }: Props) => {
-  switch (type) {
-    case Technologies.Firebase:
-      return <IconFirebase />;
-    case Technologies.Gatsy:
-      return <IconGatsby />;
-    case Technologies.GraphQL:
-      return <IconGraphQL />;
-    case Technologies.JavaScript:
-      return <IconJavaScript />;
-    case Technologies.PHP:
-      return <IconPHP />;
-    case Technologies.Sass:
-      return <IconSass />;
-    case Technologies.TypeScript:
-      return <IconTypeScript />;
-    case Technologies.WordPress:
-      return <IconWordPress />;
-    case Technologies.React:
-      return <IconReact />;
-    case Technologies.Node:
-      return <IconNode />;
-    case Technologies.Stripe:
-      return <IconStripe />;
-    case Technologies.AWS:
-      return <IconAWS />;
-    case Technologies.NextJS:
-      return <IconNextJS />;
-    default:
-      return null;
-  }
+  const IconComponent = IconLookup[type];
+
+  return (
+    <IconWrapper>
+      {/* @ts-ignore */}
+      <IconComponent />
+    </IconWrapper>
+  );
 };
 
 export default TechnologyIcon;

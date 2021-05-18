@@ -14,8 +14,8 @@ const IconUndo = () => {
       <path
         d="M9 1C4.58333 1 1 4.58333 1 9C1 13.4167 4.58333 17 9 17C13.4167 17 17 13.4167 17 9C17 4.58333 13.4167 1 9 1Z"
         stroke="#8EA8B7"
-        stroke-width="2"
-        stroke-miterlimit="10"
+        strokeWidth="2"
+        strokeMiterlimit="10"
       />
     </svg>
   );

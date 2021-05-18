@@ -54,7 +54,7 @@ const PROJECTS: Projects = {
     name: 'The CAP2020 Online Quiz',
     date: 'August 2020',
     shortDate: 'Aug 2020',
-    slug: '/projets/knox-cap-2020-quiz',
+    slug: '/projects/knox-cap-2020-quiz',
     overview:
       'Knox Pharmaceuticals were looking to add some spice to their online virtual conference by offering a chance to win in-store vouchers via their online quiz. The buzz-feed styled quiz consitsted of 5 rounds, each lasting 30 seconds.\n\nI was responsible for designing and building the quiz. The game logic was abstracted from the UI, which allowed easy customisation of rules (such as points per answer and time constraints), modifying questions etc.\n\nOver 150 people had played the quiz by the end of the conference.',
     keyPoints: [
@@ -74,7 +74,7 @@ const PROJECTS: Projects = {
     name: 'Online Booking Form',
     date: 'December 2019',
     shortDate: 'Dec 2019',
-    slug: '/projets/clear-h2o-booking-form',
+    slug: '/projects/clear-h2o-booking-form',
     overview:
       'Clear H2O Window Cleaning Ltd approached me with an idea: they wanted a simple, online booking form so customers could book their services without phone interaction.\n\nAs a result, I designed and a built an online booking system, with automated emails, as well as an admin dashboard for Clear H2O to manage their bookings.',
     keyPoints: [
@@ -100,7 +100,7 @@ const PROJECTS: Projects = {
     name: 'New Website',
     date: 'November 2019',
     shortDate: 'Nov 2019',
-    slug: '/projets/clear-h2o-wesbite',
+    slug: '/projects/clear-h2o-wesbite',
     overview:
       'With little online presence, Clear H2O Window Cleaning Ltd were looking to get up-to-date with the times and launch a new website which would show of their online booking form.\n\nI designed and built them a website in Gatsby.js, which pulled content from a separate WordPress site - allowing the team at Clear H2O to easily update their website copy.',
     keyPoints: [
