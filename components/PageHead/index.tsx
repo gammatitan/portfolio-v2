@@ -1,5 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
+import CONTACT_INFO from '../../content/ContactInfo';
+
+const pageTitle: string = 'Jake Brown | Software Engineer';
 
 const keywords: string[] = [
   'web design',
@@ -22,7 +25,7 @@ const description: string =
 
 const PageHead = () => (
   <Head>
-    <title>Jake Brown | Software Engineer</title>
+    <title>{pageTitle}</title>
     <link rel="icon" href="/favicon/favicon-48x48.png" />
     <link
       rel="apple-touch-icon"
@@ -55,7 +58,6 @@ const PageHead = () => (
     <meta property="og:url" content="https://www.jake-brown.co.uk" />
     <meta property="og:type" content="website" />
     <meta itemProp="name" content="Jake Brown" />
-    <link rel="canonical" href="https://www.jake-brown.co.uk" />
     <link
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&display=swap"
       rel="stylesheet"
@@ -66,6 +68,23 @@ const PageHead = () => (
     />
     <meta name="robots" content="index,follow" />
     <meta name="googlebot" content="index,follow" />
+    <meta property="twitter:card" key="twitterCard" content="summary" />
+    <meta
+      property="twitter:site"
+      key="twitterSite"
+      content={CONTACT_INFO.TWITTER_HANDLE}
+    />
+    <meta
+      property="twitter:creator"
+      key="twitterCreator"
+      content={CONTACT_INFO.TWITTER_HANDLE}
+    />
+    <meta key="twitterTitle" property="twitter:title" content={pageTitle} />
+    <meta
+      key="twitterDescription"
+      property="twitter:description"
+      content={description}
+    />
   </Head>
 );
 

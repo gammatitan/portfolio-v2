@@ -1,12 +1,25 @@
+import Head from 'next/head';
 import PageWrapper from '../../components/PageWrapper';
 import Project from '../../containers/Project';
-import { PROJECTS_LIST } from '../../content/Projects';
+import { Project as ProjectType, PROJECTS_LIST } from '../../content/Projects';
 
-const ProjectPage = (props: any) => {
+type Props = {
+  content: ProjectType;
+};
+
+const ProjectPage = (props: Props) => {
+  const { content } = props;
   return (
-    <PageWrapper>
-      <Project {...props.content} />
-    </PageWrapper>
+    <>
+      <Head>
+        <title>
+          {content.name} - {content.client} | Jake Brown
+        </title>
+      </Head>
+      <PageWrapper>
+        <Project {...props.content} />
+      </PageWrapper>
+    </>
   );
 };
 

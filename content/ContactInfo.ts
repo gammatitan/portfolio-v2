@@ -3,6 +3,7 @@ const CONTACT_INFO = {
   LINKEDIN: 'https://www.linkedin.com/in/jakebrownn',
   GITHUB: 'https://github.com/gammatitan',
   TWITTER: 'https://twitter.com/_brownj',
+  TWITTER_HANDLE: '@_brownj',
 };
 
 export default CONTACT_INFO;
