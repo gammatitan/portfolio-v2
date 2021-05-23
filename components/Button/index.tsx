@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyledButton, StyledButtonContent } from './styles';
 
-type Props = React.BaseHTMLAttributes<{
+export type Props = React.ButtonHTMLAttributes<{
   children: React.ReactNode;
 }>;
 

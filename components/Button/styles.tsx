@@ -1,13 +1,14 @@
 import styled from 'styled-components';
 import { rem } from 'polished';
 
-export const StyledButton = styled.button`
+export const StyledButton = styled.button<{ disabled?: boolean }>`
   position: relative;
   padding: ${rem('16px')} ${rem('23px')} ${rem('15px')};
-  cursor: pointer;
+  cursor: ${(props) => (props.disabled ? 'default' : 'pointer')};
   border: ${rem('2px')} solid ${(props) => props.theme.colors.blue};
   border-radius: ${rem('6px')};
   transition: all 0.2s ease;
+  opacity: ${(props) => (props.disabled ? 0.7 : 1)};
 
   &:hover {
     opacity: 0.7;
