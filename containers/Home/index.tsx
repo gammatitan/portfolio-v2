@@ -4,13 +4,9 @@ import Contact from './Sections/Contact';
 import Experience from './Sections/Experience';
 
 const Home = () => {
-  const onHeroButtonClick = () => {
-    console.log('Hello');
-  };
-
   return (
     <>
-      <Hero handleButtonClick={onHeroButtonClick} />
+      <Hero />
       <Experience />
       <Projects />
       <Contact />

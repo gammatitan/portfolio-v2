@@ -10,22 +10,23 @@ import {
   NavList,
   StyledHeader,
 } from './styles';
+import { useScroll } from '../../state/ScrollContext';
+import HomeSection from '../../constants/homeSections';
 
 type NavItem = {
   label: string;
-  scrollToBlock: string;
+  id: HomeSection;
 };
 
 const NAV_ITEMS: NavItem[] = [
-  { label: 'Experience', scrollToBlock: 'experience' },
-  { label: 'Projects', scrollToBlock: 'projects' },
-  { label: 'Contact', scrollToBlock: 'contact' },
+  { label: 'Experience', id: HomeSection.Experience },
+  { label: 'Projects', id: HomeSection.Projects },
+  { label: 'Contact', id: HomeSection.Contact },
 ];
 
 const Header = () => {
+  const { scrollToSection } = useScroll();
   const { route } = useRouter();
-
-  const handleClick = (scrollToBlock: string) => () => {};
 
   return (
     <StyledHeader>
@@ -44,10 +45,7 @@ const Header = () => {
             </NavItem>
           ) : (
             NAV_ITEMS.map((item: NavItem) => (
-              <NavItem
-                key={item.label}
-                onClick={handleClick(item.scrollToBlock)}
-              >
+              <NavItem key={item.id} onClick={() => scrollToSection(item.id)}>
                 <NavItemText>{item.label}</NavItemText>
               </NavItem>
             ))

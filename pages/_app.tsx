@@ -1,5 +1,6 @@
 import { ThemeProvider } from 'styled-components';
 import PageHead from '../components/PageHead';
+import { ScrollProvider } from '../state/ScrollContext';
 import GlobalStyle from '../styles/GlobalStyle';
 import theme from '../styles/theme';
 
@@ -9,7 +10,9 @@ export default function App({ Component, pageProps }) {
       <PageHead />
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <Component {...pageProps} />
+        <ScrollProvider>
+          <Component {...pageProps} />
+        </ScrollProvider>
       </ThemeProvider>
     </>
   );
