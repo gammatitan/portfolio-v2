@@ -1,4 +1,6 @@
-import { StyledInput, Label } from './styles';
+import { FormikErrors } from 'formik';
+import InputError from '../InputError';
+import { StyledInput, Label, Wrapper } from './styles';
 
 type Props = {
   name: string;
@@ -6,6 +8,7 @@ type Props = {
   onChange: (e) => void;
   value: string;
   placeholder?: string;
+  error?: string | string[] | FormikErrors<any> | FormikErrors<any>[];
   type?: 'text';
   onFocus?: () => void;
   onBlur?: () => void;
@@ -13,15 +16,16 @@ type Props = {
 };
 
 const Input = (props: Props) => {
-  const { name, label, ...rest } = props;
+  const { name, label, error, gutterBottom, ...rest } = props;
   const inputId = `input-${name}`;
 
   return (
-    <div>
+    <Wrapper gutterBottom={gutterBottom}>
       {/* @ts-ignore */}
       <Label htmlFor={inputId}>{label}</Label>
-      <StyledInput {...rest} id={inputId} />
-    </div>
+      <StyledInput {...rest} id={inputId} name={name} />
+      <InputError message={error} />
+    </Wrapper>
   );
 };
 

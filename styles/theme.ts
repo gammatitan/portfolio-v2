@@ -2,10 +2,11 @@ const theme = {
   colors: {
     black: '#000000',
     white: '#FFFFFF',
-    darkBlue: '#161b25',
-    blue: '#41a4ce',
-    lightBlue: '#7792a1',
-    faintBlue: '#8ea8b7',
+    darkBlue: '#161B25',
+    blue: '#41A4CE',
+    lightBlue: '#7792A1',
+    faintBlue: '#8EA8B7',
+    red: '#FF6161',
   },
   breakpoints: {
     xl: '1200px',

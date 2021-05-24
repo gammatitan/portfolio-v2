@@ -9,7 +9,7 @@ import {
 type Props = {
   id: string;
   checked: boolean;
-  onChange: () => void;
+  onChange: (e) => void;
   label: string;
   gutterBottom?: boolean;
 };

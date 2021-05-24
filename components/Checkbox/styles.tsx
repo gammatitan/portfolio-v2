@@ -9,8 +9,8 @@ export const CheckboxWrapper = styled.div<{ gutterBottom?: boolean }>`
   ${(props) => props.gutterBottom && `margin-bottom: ${rem('24px')}`}
 
   input:checked ~ div {
-    background: ${(props) => props.theme.colors.blue};
-    border-color: ${(props) => props.theme.colors.blue};
+    background: ${(props) => props.theme.colors.faintBlue};
+    border-color: ${(props) => props.theme.colors.faintBlue};
   }
 
   input:checked ~ div:after {
@@ -20,7 +20,7 @@ export const CheckboxWrapper = styled.div<{ gutterBottom?: boolean }>`
   div:after {
     top: ${rem('1px')};
     left: ${rem('4px')};
-    border: solid ${(props) => props.theme.colors.white};
+    border: solid ${(props) => props.theme.colors.darkBlue};
     width: ${rem('5px')};
     height: ${rem('10px')};
     border-width: 0 ${rem('2px')} ${rem('2px')} 0;
@@ -31,6 +31,11 @@ export const CheckboxWrapper = styled.div<{ gutterBottom?: boolean }>`
 export const HiddenCheckbox = styled.input`
   position: absolute;
   opacity: 0;
+  bottom: 0;
+  left: 0;
+  width: ${rem('20px')};
+  top: ${rem('4px')};
+  z-index: 5;
 `;
 
 export const StyledCheckbox = styled.div<{ focussed: boolean }>`
@@ -40,7 +45,7 @@ export const StyledCheckbox = styled.div<{ focussed: boolean }>`
   height: ${rem('16px')};
   width: ${rem('16px')};
   background: ${(props) => props.theme.colors.white};
-  border: ${rem('1px')} solid ${(props) => props.theme.colors.faintBlue};
+  border: ${rem('1px')} solid ${(props) => props.theme.colors.lightBlue};
   border-radius: ${rem('2px')};
   margin: ${rem('2px')};
 
