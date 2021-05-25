@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
-import PageWrapper from '../../components/PageWrapper';
-import GardenParty from '../../containers/GardenParty';
+import PageWrapper from '../../../components/PageWrapper';
+import GardenParty from '../../../containers/GardenParty';
 
 const GardenParty2021Page = () => {
   return (

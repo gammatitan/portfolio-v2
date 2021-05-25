@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 import Checkbox from '../../../components/Checkbox';
 import CheckboxGroup from '../../../components/CheckboxGroup';
 import Input from '../../../components/Input';
@@ -10,10 +11,12 @@ import { Formik } from 'formik';
 import request from '../../../helpers/request';
 import { ENDPOINTS } from '../../../constants/endpoints';
 import InputError from '../../../components/InputError';
+import { TrendingText } from './styles';
 
 type FormErrors = {
   name?: string;
   dates?: string;
+  nickname?: string;
 };
 
 const validateFields = (values) => {
@@ -21,6 +24,10 @@ const validateFields = (values) => {
 
   if (!values.name) {
     errors.name = 'Please input your name yo';
+  }
+
+  if (!values.nickname) {
+    errors.nickname = "Don't be boring make one up";
   }
 
   if (
@@ -44,6 +51,7 @@ const validateFields = (values) => {
 };
 
 const Booking = () => {
+  const router = useRouter();
   const [requestState, setRequestState] = useState<null | RequestState>(null);
 
   return (
@@ -59,6 +67,8 @@ const Booking = () => {
             request.post(ENDPOINTS.EVENTS_GARDEN_PARTY_2021, {
               body: { ...values },
             });
+
+            router.push('/events/garden-party-2021/confirmation');
           } catch {
             setRequestState(RequestState.Error);
           }
@@ -89,8 +99,9 @@ const Booking = () => {
               name="nickname"
               value={values.nickname}
               onChange={handleChange}
-              label="Party Nickname"
+              label="Party Nickname*"
               placeholder="e.g. Jezza"
+              error={errors.nickname}
             />
             <CheckboxGroup
               gutterBottom
@@ -105,7 +116,11 @@ const Booking = () => {
               />
               <Checkbox
                 id="july24"
-                label="Sat 24th July"
+                label={
+                  <>
+                    Sat 24th July <TrendingText>🔥 Most Popular</TrendingText>
+                  </>
+                }
                 onChange={handleChange}
                 checked={values.july24}
               />

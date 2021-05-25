@@ -10,7 +10,7 @@ type Props = {
   id: string;
   checked: boolean;
   onChange: (e) => void;
-  label: string;
+  label: React.ReactNode;
   gutterBottom?: boolean;
 };
 

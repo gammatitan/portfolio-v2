@@ -57,4 +57,7 @@ export const AddressLink = styled(ExternalLink)`
   }
 `;
 
-export const Form = styled.form``;
+export const TrendingText = styled.span`
+  font-weight: bold;
+  color: ${(props) => props.theme.colors.faintBlue};
+`;
