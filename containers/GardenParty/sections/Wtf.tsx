@@ -7,7 +7,7 @@ const Wtf = () => {
       <Typography variant="subheading">Bye bye covid 👋</Typography>
       <Typography>This past year has been a fucking rollercoaster.</Typography>
       <Typography>
-        With lockdown coming a close and many of my friends starting on new
+        With lockdown coming to a close and many of my friends starting new
         chapters in their lives, myself included, I wanted to host a social
         gathering to mark the end of lockdown and celebrate the start of new
         beginnings.
