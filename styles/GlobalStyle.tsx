@@ -1,74 +1,75 @@
 import { rem } from 'polished';
 import { createGlobalStyle } from 'styled-components';
 import fallbackFonts from './fallbackFonts';
+import theme from './theme';
 
 const GlobalStyle = createGlobalStyle`
-    body {
-        background: #161b25;
-        font-size: ${rem('18px')};
-        color: #FFFFFF;
-        font-family: 'IBM Plex Sans', ${fallbackFonts};
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
-    
-    h1,
-    h2,
-    h3,
-    h4,
-    h5 {
-        margin: 0;
-    }
+  body {
+    background: ${theme.colors.darkBlue};
+    font-size: ${rem('18px')};
+    color: ${theme.colors.white};
+    font-family: 'IBM Plex Sans', ${fallbackFonts};
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
-    header,
-    footer,
-    section,
-    main {
-        position: relative;
-    }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    margin: 0;
+  }
 
-    a {
-        margin: 0;
-        transition: all 0.2s ease;
-        color: #8ea8b7;
-        text-decoration: none;
-        cursor: pointer;
-    }
+  header,
+  footer,
+  section,
+  main {
+    position: relative;
+  }
 
-    a:hover {
-        opacity: 0.7;
-    }
+  a {
+    margin: 0;
+    transition: all 0.2s ease;
+    color: ${theme.colors.faintBlue};
+    text-decoration: none;
+    cursor: pointer;
+  }
 
-    p {
-        margin: ${rem('8px')} 0 ${rem('16px')};
-        line-height: 1.4em;
-    }
+  a:hover {
+    opacity: 0.7;
+  }
 
-    input,
-    textarea {
-        border: 0;
-        padding: 8px;
-        width: calc(100% - 16px);
-        resize: none;
-        line-height: 1.2;
-    }
+  p {
+    margin: ${rem('8px')} 0 ${rem('16px')};
+    line-height: ${rem('24px')};
+  }
 
-    button {
-        background: none;
-        border: none;
+  input,
+  textarea {
+    border: 0;
+    padding: ${rem('8px')};
+    width: calc(100% - ${rem('16px')});
+    resize: none;
+    line-height: 1.2;
+  }
 
-        &:focus {
-            outline: 0;
-        }
-    }
+  button {
+    background: none;
+    border: none;
 
-    ul {
-        list-style-image: url('/svg/list-bullet.svg');
+    &:focus {
+      outline: 0;
     }
+  }
 
-    video {
-        width: 100%;
-    }
+  ul {
+    list-style-image: url('/svg/list-bullet.svg');
+  }
+
+  video {
+    width: 100%;
+  }
 `;
 
 export default GlobalStyle;
