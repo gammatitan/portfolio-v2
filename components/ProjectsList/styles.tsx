@@ -33,7 +33,7 @@ export const ProjectCardAnchor = styled.a`
     transform: translateY(-${rem('2px')});
 
     .project-card__client,
-    .project-card__date {
+    .project-card__secondaryText {
       color: ${(props) => props.theme.colors.white};
     }
 
@@ -69,7 +69,7 @@ export const ProjectCardContentRow = styled.div`
   transition: all 0.2s ease;
 `;
 
-export const ProjectCardDate = styled(BoldText)`
+export const ProjectCardSecondaryText = styled(BoldText)`
   position: absolute;
   top: ${rem('8px')};
   right: ${rem('16px')};

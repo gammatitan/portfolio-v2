@@ -7,7 +7,7 @@ import {
   ProjectCardClient,
   ProjectCardContentRow,
   ProjectCardContentWrapper,
-  ProjectCardDate,
+  ProjectCardSecondaryText,
   ProjectCardSvgWrapper,
 } from './styles';
 
@@ -15,10 +15,10 @@ interface Props {
   client: string;
   name: string;
   url: string;
-  date: string;
+  secondaryText: string;
 }
 
-const ProjectCard = ({ client, name, url, date }: Props) => {
+const ProjectCard = ({ client, name, url, secondaryText }: Props) => {
   const [entered, setEntered] = useState(false);
 
   const className = entered ? 'project-card hovering' : 'project-card';
@@ -40,9 +40,9 @@ const ProjectCard = ({ client, name, url, date }: Props) => {
             </ProjectCardClient>
           </ProjectCardContentRow>
           <Typography variant="title">{name}</Typography>
-          <ProjectCardDate className="project-card__date">
-            {date}
-          </ProjectCardDate>
+          <ProjectCardSecondaryText className="project-card__secondaryText">
+            {secondaryText}
+          </ProjectCardSecondaryText>
         </ProjectCardContentWrapper>
       </ProjectCardAnchor>
     </Link>

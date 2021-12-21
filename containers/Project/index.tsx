@@ -37,26 +37,30 @@ const Project = (props: Props) => {
         <ProjectSectionTitle>Technologies</ProjectSectionTitle>
         <TechnologyList list={props.technologies} />
       </ProjectSection>
-      <ProjectSection>
-        <ProjectSectionTitle>Summary</ProjectSectionTitle>
-        <ul>
-          {props.keyPoints.map((point) => (
-            <li key={point}>
-              <Typography>{point}</Typography>
-            </li>
-          ))}
-        </ul>
-      </ProjectSection>
-      <ProjectSection>
-        <ProjectSectionTitle>Key Learnings</ProjectSectionTitle>
-        <ul>
-          {props.keyLearnings.map((point) => (
-            <li key={point}>
-              <Typography>{point}</Typography>
-            </li>
-          ))}
-        </ul>
-      </ProjectSection>
+      {props.keyPoints.length > 0 && (
+        <ProjectSection>
+          <ProjectSectionTitle>Summary</ProjectSectionTitle>
+          <ul>
+            {props.keyPoints.map((point) => (
+              <li key={point}>
+                <Typography>{point}</Typography>
+              </li>
+            ))}
+          </ul>
+        </ProjectSection>
+      )}
+      {props.keyLearnings.length > 0 && (
+        <ProjectSection>
+          <ProjectSectionTitle>Key Learnings</ProjectSectionTitle>
+          <ul>
+            {props.keyLearnings.map((point) => (
+              <li key={point}>
+                <Typography>{point}</Typography>
+              </li>
+            ))}
+          </ul>
+        </ProjectSection>
+      )}
     </ProjectWrapper>
   );
 };

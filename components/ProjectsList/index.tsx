@@ -8,7 +8,7 @@ const ProjectsList = () => {
       {PROJECTS_LIST.map((project) => (
         <ProjectListItem
           key={`${project.name} ${project.client}`}
-          date={project.shortDate}
+          secondaryText={project.keyTechnology}
           url={project.slug}
           name={project.name}
           client={project.client}
