@@ -6,7 +6,7 @@ export type Experience = {
   responsibilities: string[];
 };
 
-const EXPERIENCES: Experience[] = [
+export const EXPERIENCE_LIST: Experience[] = [
   {
     jobTitle: 'Web Engineer',
     company: 'Depop',
@@ -22,23 +22,21 @@ const EXPERIENCES: Experience[] = [
     companyUrl: 'https://vouchedfor.co.uk',
     employmentPeriod: 'November 2018 - March 2021',
     responsibilities: [
-      'Work closely with project managers and key decision makers to enhance and implement new features to consumer-facing sites and internal systems.',
+      'Work closely with project managers and stakeholders to enhance and implement new features to consumer-facing sites and internal systems.',
       'Utilise a variety of different languages, frameworks and libraries such as JavaScript, React.js, PHP, Symfony 4, Doctrine, MySQL.',
       'Adopt TDD practices within a fast-paced, agile product team.',
       'Maintain and scale various microservices via Docker and AWS.',
     ],
   },
   {
-    jobTitle: 'Front End Developer',
+    jobTitle: 'Junior Developer',
     company: 'Adapt Digital',
     companyUrl: 'https://adapt.digital',
     employmentPeriod: 'November 2017 - November 2018',
     responsibilities: [
-      'Develop bespoke WordPress and Shopify themes from approved design specs, ensuring cross-browser compatibility and quality UX.',
-      'Lead core aspects of the project lifecycle including build, testing and deployment.',
-      'Enhance new and existing websites to increase performance and improve accessibility.',
+      'Develop bespoke WordPress and Shopify themes from approved design specs.',
+      'Lead core aspects of the project lifecycle including build, manual testing and deployment.',
+      'Audit and enhance website performance and accessibility.',
     ],
   },
 ];
-
-export default EXPERIENCES;
