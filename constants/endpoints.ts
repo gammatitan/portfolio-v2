@@ -1,4 +1,4 @@
-import { ApiBaseUrl } from '../domain/request';
+import { ApiBaseUrl } from '../types/request';
 
 export const API_BASE_URL: ApiBaseUrl = process.env.API_BASE_URL || '';
 

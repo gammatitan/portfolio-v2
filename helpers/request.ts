@@ -1,31 +1,35 @@
 import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios';
-import { RequestBody, RequestPathname } from '../domain/request';
 
-interface IRequest {}
+interface IRequest {
+  get: (pathname: string) => Promise<AxiosResponse>;
+  post: (pathname: string, config: Config) => Promise<AxiosResponse>;
+  put: (pathname: string, config: Config) => Promise<AxiosResponse>;
+  delete: (pathname: string, config: Config) => Promise<AxiosResponse>;
+}
 
 type Config = AxiosRequestConfig & {
-  body?: RequestBody;
+  body?: object;
 };
 
 class Request implements IRequest {
-  get = (pathname: RequestPathname): Promise<any> => {
+  get = (pathname: string): Promise<AxiosResponse> => {
     return this.send(pathname, 'get', null);
   };
 
-  post = (pathname: RequestPathname, config: Config) => {
+  post = (pathname: string, config: Config): Promise<AxiosResponse> => {
     return this.send(pathname, 'post', config);
   };
 
-  put = (pathname: RequestPathname, config: Config) => {
+  put = (pathname: string, config: Config): Promise<AxiosResponse> => {
     return this.send(pathname, 'put', config);
   };
 
-  delete = (pathname: RequestPathname, config: Config) => {
+  delete = (pathname: string, config: Config): Promise<AxiosResponse> => {
     return this.send(pathname, 'delete', config);
   };
 
   private send = async (
-    pathname: RequestPathname,
+    pathname: string,
     method: string,
     config: Config = {}
   ): Promise<AxiosResponse> => {
