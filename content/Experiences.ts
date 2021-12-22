@@ -13,7 +13,8 @@ export const EXPERIENCE_LIST: Experience[] = [
     companyUrl: 'https://depop.com',
     employmentPeriod: 'March 2021 - Present',
     responsibilities: [
-      'Working with TypeScript, React.js, Next.js, Redux, Node, Express',
+      'Working within the Payments team to enhance the checkout experience on web',
+      'TypeScript, React.js, Next.js, Redux, Node, Express',
     ],
   },
   {
@@ -22,10 +23,9 @@ export const EXPERIENCE_LIST: Experience[] = [
     companyUrl: 'https://vouchedfor.co.uk',
     employmentPeriod: 'November 2018 - March 2021',
     responsibilities: [
-      'Work closely with project managers and stakeholders to enhance and implement new features to consumer-facing sites and internal systems.',
-      'Utilise a variety of different languages, frameworks and libraries such as JavaScript, React.js, PHP, Symfony 4, Doctrine, MySQL.',
-      'Adopt TDD practices within a fast-paced, agile product team.',
-      'Maintain and scale various microservices via Docker and AWS.',
+      'Work closely with stakeholders to implement new features to consumer-facing sites and internal systems',
+      'Adopt TDD practices within a fast-paced, agile product team',
+      'JavaScript, React.js, PHP, Symfony, Doctrine, MySQL, Docker, AWS',
     ],
   },
   {
@@ -34,9 +34,9 @@ export const EXPERIENCE_LIST: Experience[] = [
     companyUrl: 'https://adapt.digital',
     employmentPeriod: 'November 2017 - November 2018',
     responsibilities: [
-      'Develop bespoke WordPress and Shopify themes from approved design specs.',
-      'Lead core aspects of the project lifecycle including build, manual testing and deployment.',
-      'Audit and enhance website performance and accessibility.',
+      'Develop bespoke WordPress and Shopify themes for businesses across the UK',
+      'Audit and enhance website performance and accessibility',
+      'HTML, CSS (SASS), JavaScript, jQuery, PHP',
     ],
   },
 ];
