@@ -1,0 +1,10 @@
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+p::selection,
+span::selection,
+a::selection {
+  background: #7792a1;
+  color: #161b25;
+}

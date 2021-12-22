@@ -4,6 +4,7 @@ import { ScrollProvider } from '../state/ScrollContext';
 import GlobalStyle from '../styles/GlobalStyle';
 import SimpleReactLightbox from 'simple-react-lightbox';
 import theme from '../styles/theme';
+import '../styles/index.css';
 
 export default function App({ Component, pageProps }) {
   return (
