@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { rem } from 'polished';
 import Typography from '../../components/Typography';
 import Section from '../../components/Section';
+import LazyImage from '../../components/LazyImage';
 
 export const ProjectWrapper = styled.div`
   padding: ${rem('160px')} 0 ${rem('320px')};
@@ -30,4 +31,15 @@ export const ProjectSectionTitle = styled(Typography).attrs({
 
 export const ProjectSection = styled(Section)`
   margin: ${rem('80px')} 0;
+`;
+
+export const ProjectImagePreview = styled(LazyImage)`
+  width: 100%;
+  border-radius: ${rem('4px')};
+  overflow: hidden;
+`;
+
+export const ProjectImageAnchor = styled.a`
+  display: block;
+  margin-top: ${rem('40px')};
 `;

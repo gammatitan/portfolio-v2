@@ -8,6 +8,11 @@ export type Project = {
   shortDate: string;
   slug: string;
   url: string;
+  images?: Array<{
+    src: string;
+    thumbnailSrc: string;
+  }>;
+  imagePreviewSrc?: string;
   overview: string;
   keyPoints: string[];
   keyLearnings: string[];
@@ -66,6 +71,12 @@ const PROJECTS: Projects = {
       Technologies.Sass,
       Technologies.JavaScript,
       Technologies.WordPress,
+    ],
+    images: [
+      {
+        thumbnailSrc: '/images/project-preview/shaba-new-website-thumbnail.jpg',
+        src: '/images/project-preview/shaba-new-website.png',
+      },
     ],
   },
   // KNOX_CAP_QUIZ: {
@@ -140,6 +151,13 @@ const PROJECTS: Projects = {
       Technologies.Sass,
       Technologies.WordPress,
       Technologies.GraphQL,
+    ],
+    images: [
+      {
+        thumbnailSrc:
+          '/images/project-preview/clear-h2o-new-website-thumbnail.jpg',
+        src: '/images/project-preview/clear-h2o-new-website.png',
+      },
     ],
   },
 };

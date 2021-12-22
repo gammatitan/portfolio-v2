@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Typography from '../../components/Typography';
 import { Project as ProjectType } from '../../content/Projects';
 import TechnologyList from '../../components/TechnologyList';
@@ -8,11 +9,30 @@ import {
   ProjectHeading,
   ProjectMeta,
   ProjectSectionTitle,
+  ProjectImageAnchor,
+  ProjectImagePreview,
 } from './styles';
 import ExternalLink from '../../components/ExternalLink';
-import Section from '../../components/Section';
+import { SRLWrapper } from 'simple-react-lightbox';
 
 type Props = {} & ProjectType;
+
+const lightboxOptions = {
+  buttons: {
+    showAutoplayButton: false,
+    showDownloadButton: false,
+    showNextButton: false,
+    showPrevButton: false,
+    showThumbnailsButton: false,
+    showFullscreenButton: false,
+  },
+  caption: {
+    showCaption: false,
+  },
+  thumbnails: {
+    showThumbnails: false,
+  },
+};
 
 const Project = (props: Props) => {
   return (
@@ -32,6 +52,16 @@ const Project = (props: Props) => {
       <ProjectSection>
         <ProjectSectionTitle>Overview</ProjectSectionTitle>
         <Typography>{props.overview}</Typography>
+        <SRLWrapper options={lightboxOptions}>
+          {props.images?.map((image) => (
+            <ProjectImageAnchor href={image.src}>
+              <ProjectImagePreview
+                src={image.thumbnailSrc}
+                alt="A screenshot of the website"
+              />
+            </ProjectImageAnchor>
+          ))}
+        </SRLWrapper>
       </ProjectSection>
       <ProjectSection>
         <ProjectSectionTitle>Technologies</ProjectSectionTitle>
