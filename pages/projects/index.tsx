@@ -7,6 +7,7 @@ const ProjectsPage = () => {
     <>
       <Head>
         <title>Projects | Jake Brown</title>
+        <meta name="robots" content="noindex, follow" />
       </Head>
       <PageWrapper>
         <ProjectsList />

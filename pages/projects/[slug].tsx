@@ -14,6 +14,7 @@ const ProjectPage = (props: Props) => {
       <Head>
         <title>
           {content.name} - {content.client} | Jake Brown
+          <meta name="robots" content="noindex, follow" />
         </title>
       </Head>
       <PageWrapper>
