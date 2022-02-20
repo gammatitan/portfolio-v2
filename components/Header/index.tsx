@@ -20,6 +20,7 @@ type NavItem = {
 
 const NAV_ITEMS: NavItem[] = [
   { label: 'Experience', id: HomeSection.Experience },
+  { label: 'Blog', id: HomeSection.Blog },
   // { label: 'Projects', id: HomeSection.Projects },
   { label: 'Contact', id: HomeSection.Contact },
 ];
