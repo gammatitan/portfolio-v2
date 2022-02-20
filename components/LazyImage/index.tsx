@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, HTMLAttributes } from 'react';
 
-const Image = (props) => {
+type Props = {} & HTMLAttributes<HTMLImageElement>;
+
+const Image = (props: Props) => {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
