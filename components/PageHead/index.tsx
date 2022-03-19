@@ -1,10 +1,11 @@
 import React from 'react';
 import Head from 'next/head';
 import CONTACT_INFO from '../../content/ContactInfo';
+import { GOOGLE_TAG_MANGER_ID } from '../../constants/tracking';
 
-const pageTitle: string = 'Jake Brown | Software Engineer';
+const PAGE_TITLE: string = 'Jake Brown | Software Engineer';
 
-const keywords: string[] = [
+const PAGE_KEYWORDS: string[] = [
   'web design',
   'website developer',
   'software engineer',
@@ -20,12 +21,12 @@ const keywords: string[] = [
   'UK',
 ];
 
-const description: string =
+const PAGE_DESCRIPTION: string =
   'Jake Brown is an experienced software engineer based in Basingstoke, UK. He specialised in building digital products with quality user experience.';
 
 const PageHead = () => (
   <Head>
-    <title>{pageTitle}</title>
+    <title>{PAGE_TITLE}</title>
     <link rel="icon" href="/favicon/favicon-48x48.png" />
     <link
       rel="apple-touch-icon"
@@ -52,8 +53,8 @@ const PageHead = () => (
       content="initial-scale=1.0, width=device-width"
       key="viewport"
     />
-    <meta name="keywords" content={keywords.join(', ')} />
-    <meta name="description" content={description} />
+    <meta name="keywords" content={PAGE_KEYWORDS.join(', ')} />
+    <meta name="description" content={PAGE_DESCRIPTION} />
     <meta property="og:site_name" content="Jake Brown" />
     <meta property="og:url" content="https://www.jake-brown.co.uk" />
     <meta property="og:type" content="website" />
@@ -79,11 +80,25 @@ const PageHead = () => (
       key="twitterCreator"
       content={CONTACT_INFO.TWITTER_HANDLE}
     />
-    <meta key="twitterTitle" property="twitter:title" content={pageTitle} />
+    <meta key="twitterTitle" property="twitter:title" content={PAGE_TITLE} />
     <meta
       key="twitterDescription"
       property="twitter:description"
-      content={description}
+      content={PAGE_DESCRIPTION}
+    />
+
+    {/* GTM */}
+    <script
+      async
+      src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_TAG_MANGER_ID}`}
+    />
+    <script
+      dangerouslySetInnerHTML={{
+        __html: `window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${GOOGLE_TAG_MANGER_ID}');`,
+      }}
     />
   </Head>
 );

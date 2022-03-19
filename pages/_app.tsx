@@ -1,12 +1,14 @@
+import SimpleReactLightbox from 'simple-react-lightbox';
 import { ThemeProvider } from 'styled-components';
+import { AppProps } from 'next/app';
+
 import PageHead from '../components/PageHead';
 import { ScrollProvider } from '../state/ScrollContext';
 import GlobalStyle from '../styles/GlobalStyle';
-import SimpleReactLightbox from 'simple-react-lightbox';
 import theme from '../styles/theme';
 import '../styles/index.css';
 
-export default function App({ Component, pageProps }) {
+const App = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <PageHead />
@@ -20,4 +22,6 @@ export default function App({ Component, pageProps }) {
       </ThemeProvider>
     </>
   );
-}
+};
+
+export default App;
