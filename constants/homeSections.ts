@@ -1,7 +1,7 @@
 enum HomeSection {
   Experience = 'experience',
   Blog = 'blog',
-  // Projects = 'projects',
+  Projects = 'projects',
   Contact = 'contact',
 }
 

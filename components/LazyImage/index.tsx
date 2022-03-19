@@ -1,6 +1,6 @@
 import React, { useState, useEffect, HTMLAttributes } from 'react';
 
-type Props = {} & HTMLAttributes<HTMLImageElement>;
+type Props = { src: string; alt: string } & HTMLAttributes<HTMLImageElement>;
 
 const Image = (props: Props) => {
   const [loaded, setLoaded] = useState(false);
